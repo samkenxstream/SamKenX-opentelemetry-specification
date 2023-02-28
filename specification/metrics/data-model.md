@@ -184,7 +184,7 @@ in scope for key design decisions:
 
 - Using OTLP as an intermediary format between two non-compatible formats
   - Importing [statsd](https://github.com/statsd/statsd) => Prometheus PRW
-  - Importing [collectd](https://collectd.org/wiki/index.php/Binary_protocol#:~:text=The%20binary%20protocol%20is%20the,some%20documentation%20to%20reimplement%20it)
+  - Importing [collectd](https://collectd.org/wiki/index.php/Binary_protocol)
     => Prometheus PRW
   - Importing Prometheus endpoint scrape => [statsd push | collectd | opencensus]
   - Importing OpenCensus "oca" => any non OC or OTel format
@@ -519,7 +519,7 @@ so that worst-case error is within their error tolerance.
 
 ### ExponentialHistogram
 
-**Status**: [Experimental](../document-status.md)
+**Status**: [Stable](../document-status.md)
 
 [ExponentialHistogram](https://github.com/open-telemetry/opentelemetry-proto/blob/cfbf9357c03bf4ac150a3ab3bcbe4cc4ed087362/opentelemetry/proto/metrics/v1/metrics.proto#L222)
 data points are an alternate representation to the

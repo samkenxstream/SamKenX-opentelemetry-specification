@@ -1,6 +1,18 @@
 file_format: 1.1.0
-schema_url: https://opentelemetry.io/schemas/1.17.0
+schema_url: https://opentelemetry.io/schemas/1.19.0
 versions:
+  1.19.0:
+    spans:
+      changes:
+        # https://github.com/open-telemetry/opentelemetry-specification/pull/3209
+        - rename_attributes:
+            attribute_map:
+              faas.execution: faas.invocation_id
+        # https://github.com/open-telemetry/opentelemetry-specification/pull/3188
+        - rename_attributes:
+            attribute_map:
+              faas.id: cloud.resource_id
+  1.18.0:
   1.17.0:
     spans:
       changes:
